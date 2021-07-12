@@ -1,0 +1,130 @@
+:root{
+    --primary:#ddd;
+    --dark:#333;
+    --light:#fff;
+    --shadow:0 1px 5px rgba(104,104,104,0.8);
+    }
+
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: var(--dark);
+    
+}
+
+
+body{
+    background: #ccc;
+    
+    margin: 30px 50px;
+    
+    line-height: 1.4;}
+
+img{
+    max-width: 100%;
+}
+
+.main-container{
+   
+    display: grid;
+    grid-gap: 20px;
+
+}
+
+.overskrift1{
+    font-family: cursive;
+    text-align: center;
+}
+.overskrift2{
+    font-family: cursive;}
+
+
+
+.Movieanmeldse{
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+}
+
+/*Navigation*/
+.main-nav3 ul{
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav3 a{
+    background: var(--primary);
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+    
+}
+.main-nav3 a:hover{
+    background: var(--dark);
+    color: var(--light);}
+
+
+.maingridcontainer{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:  'Movietext Movietext Movietext'
+                          'Movietext Movietext Movietext  Movietext ';
+                           
+    grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
+}
+
+
+.Movietext{
+    background: var(--primary);
+    text-align: center;
+    font-family:fantasy;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+}
+
+
+
+.undertext3{
+    text-align: center;
+}
+
+
+/*Media Queries*/
+
+@media (max-width:950px){
+    .maingridcontainer{
+        grid-template-areas: 
+            'Movietext Movietext Movietext'
+             'Movietext Movietext Movietext';
+    }
+
+.main-nav3 ul{
+    grid-template-columns: 1fr;
+    }
+    
+.Movieanmeldse{
+        grid-template-columns: 1fr;
+
+    }
+    
+    }
+
+    @media(max-width: 500px){
+     .maingridcontainer{
+        grid-template-areas: 
+            'Movietext'
+            'Movietext'
+            'Movietext'; 
+    }
+    }
